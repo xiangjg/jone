@@ -1,0 +1,1 @@
+nohup java -jar power.jar --spring.config.location=classpath:/config/application.properties,classpath:/config/logback.xml > start.log 2>&1 &
