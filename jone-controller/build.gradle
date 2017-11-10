@@ -36,6 +36,7 @@ dependencies {
     compile(
             project(":jone-entity"),
             project(":jone-api"),
-            project(":jone-service")
+            project(":jone-service"),
+            project(":jone-util")
     )
 }

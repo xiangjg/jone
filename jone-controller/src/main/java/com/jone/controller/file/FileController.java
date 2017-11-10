@@ -45,47 +45,6 @@ public class FileController extends BaseController {
     @Autowired
     private CodeMapper codeMapper;
 
-    @RequestMapping("/checkup")
-    public ModelAndView checkup() {
-        ModelAndView mv = new ModelAndView("audit/documentCheckup");
-        mv.addObject("doctypes", codeMapper.getStationDocType());
-        return mv;
-    }
-
-    @RequestMapping("/index")
-    public ModelAndView index() {
-        ModelAndView mv = new ModelAndView("document");
-        mv.addObject("doctypes", codeMapper.getStationDocType());
-        return mv;
-    }
-
-    @RequestMapping("/list")
-    public void list(HttpServletRequest request, HttpServletResponse response) {
-        BaseData bd = new BaseData();
-        Map<String, Object> param = new HashMap<>();
-        String keyword = request.getParameter("keyword");
-        String doctype = request.getParameter("doctype");
-        String flag = request.getParameter("auditflag");
-        if (!StringUtils.isEmpty(keyword))
-            param.put("keyword", keyword);
-        if (!StringUtils.isEmpty(doctype))
-            param.put("doctype", Integer.valueOf(doctype));
-        if (!StringUtils.isEmpty(flag)) {
-            //boolean auditflag = false;
-            param.put("auditflag", Integer.valueOf(flag));
-        }
-        try {
-            List<FileObjVo> fileList = fileService.selectByParam(param);
-            bd.setCode(0);
-            bd.setData(fileList);
-        } catch (Exception e) {
-            bd.setCode(-1);
-            bd.setMessage(e.getMessage());
-            logger.error("{}", e);
-        }
-        printJson(bd, response);
-    }
-
     @Value("${openoffice.path}")
     private String path;
 

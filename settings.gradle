@@ -1,0 +1,8 @@
+rootProject.name = 'jone'
+include 'jone-api'
+include 'jone-service'
+include 'jone-entity'
+include 'jone-controller'
+include 'jone-util'
+include 'jone-dao'
+

@@ -1,6 +1,7 @@
 package com.jone.controller;
 
-import com.cloude.water.interceptor.UserSecurityInterceptor;
+
+import com.jone.controller.interceptor.UserSecurityInterceptor;
 import org.springframework.beans.BeansException;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.ApplicationContextAware;
