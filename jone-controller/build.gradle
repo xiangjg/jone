@@ -31,7 +31,7 @@ dependencies {
     compile('org.springframework.boot:spring-boot-starter-web')
 
     compile "com.alibaba:fastjson:1.2.4"
-    compile("com.alibaba:druid:1.0.18")
+    compile("com.alibaba:druid:1.0.29")
 
     compile(
             project(":jone-entity"),

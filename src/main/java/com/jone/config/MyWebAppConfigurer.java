@@ -1,4 +1,4 @@
-package com.jone.controller;
+package com.jone.config;
 
 
 import com.jone.controller.interceptor.UserSecurityInterceptor;
@@ -30,7 +30,7 @@ public class MyWebAppConfigurer extends WebMvcConfigurerAdapter implements Appli
 	}
 	@Override
 	public void addInterceptors(InterceptorRegistry registry) {
-		registry.addInterceptor(new UserSecurityInterceptor()).addPathPatterns("/**").excludePathPatterns("/login").excludePathPatterns("/toLogin").excludePathPatterns("/error").excludePathPatterns("/file/download");
+		//registry.addInterceptor(new UserSecurityInterceptor()).addPathPatterns("/**").excludePathPatterns("/login").excludePathPatterns("/toLogin").excludePathPatterns("/error").excludePathPatterns("/file/download");
 		super.addInterceptors(registry);
 	}
 }

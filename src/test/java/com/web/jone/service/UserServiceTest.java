@@ -3,7 +3,7 @@ package com.web.jone.service;
 import com.jone.api.system.UserService;
 import com.jone.dao.system.UserDao;
 import com.jone.entity.system.User;
-import com.web.jone.JoneApplication;
+import com.jone.JoneApplication;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;

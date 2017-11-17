@@ -1,4 +1,4 @@
-package com.web.jone.config;
+package com.jone.config;
 
 import org.springframework.boot.autoconfigure.domain.EntityScan;
 import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
